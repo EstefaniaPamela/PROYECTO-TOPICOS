@@ -23,6 +23,7 @@
 <ion-header>
   <ion-toolbar color="primary" align="center">
     <ion-title>Cine & TV</ion-title>
+    <p align="right">Usuario: {{usuario}} | {{email}}</p>
   </ion-toolbar>
 </ion-header>
 
@@ -86,5 +87,5 @@
   </div>
   
   <ion-button size="large" routerLink="/pelis" color="secondary">Ver el contenido</ion-button>
-  <ion-button size="large" (click)="onLogout()" color="danger">SALIR</ion-button>
-</ion-content>
+  <ion-button size="large" (click)="logout()" color="danger">SALIR</ion-button>
+</ion-content> 

@@ -7,6 +7,7 @@ import { AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firesto
 import {  of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import * as firebase from 'firebase';
+import {Platform} from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,8 @@ export class AuthService {
   public user$: Observable<User>;
   public isLogged: any =false;
 
-  constructor(private afAuth:AngularFireAuth, private afs: AngularFirestore){
+  constructor(private afAuth:AngularFireAuth, private afs: AngularFirestore,
+    public platform: Platform){
     afAuth.authState.subscribe(user =>(this.isLogged = user));
     this.user$ = this.afAuth.authState.pipe(
       switchMap ((user)=>{
@@ -38,13 +40,34 @@ export class AuthService {
   }
   
   async loginGoogle(): Promise<User>{
-    try{
+    if(this.platform.is('android')){
+      alert('es android');
+      try{
+        const { user }= await this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+        this.updateUserData(user);
+        return user;
+      }catch (error) {
+        console.log('Error->', error);
+      }
+    }else if(this.platform.is('desktop')){
+      alert('es desktop');
+      try{
+        const { user }= await this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+        this.updateUserData(user);
+        return user;
+      }catch (error) {
+        console.log('Error->', error);
+      }
+    }else{
+      try{
       const { user }= await this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
       this.updateUserData(user);
       return user;
     }catch (error) {
       console.log('Error->', error);
     }
+    }
+    
   }
   
   async register(email: string, password: string): Promise<User>{
@@ -93,8 +116,10 @@ export class AuthService {
       displayName: user.displayName,
     };
 
-    return userRef.set(data, {merge: true})
+    return userRef.set(data, {merge: true});
 
   }
-
+  obtenerDatosUsuario (){
+    return this.afAuth.authState;
+  }
 }
