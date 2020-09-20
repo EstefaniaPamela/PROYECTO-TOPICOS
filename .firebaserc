@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ionic-login-79da7": {
+      "hosting": {
+        "app": [
+          "ionic-login-79da7"
+        ]
+      }
+    }
+  }
+}
