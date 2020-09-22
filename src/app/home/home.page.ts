@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import {AuthService} from '../services/auth.service';
+import { User } from '../shared/user.interface';
+import { from, Observable } from 'rxjs';
+import { AngularFireAuth } from '@angular/fire/auth'
+import {Platform} from '@ionic/angular';
 
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder, NativeGeocoderOptions, NativeGeocoderResult } from '@ionic-native/native-geocoder/ngx';
@@ -11,6 +16,9 @@ import { NativeGeocoder, NativeGeocoderOptions, NativeGeocoderResult } from '@io
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  public user$: Observable<User>;
+  usuario: string;
+  email: string;
 
   
   // Readable Address
