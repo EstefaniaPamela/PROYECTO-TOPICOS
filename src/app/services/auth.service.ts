@@ -30,6 +30,9 @@ export class AuthService {
    }
   
  
+   obtenerDatosUsuario (){
+    return this.afAuth.authState;
+  }
 
   async resetPassword(email: string): Promise<void>{
     try{
@@ -41,7 +44,7 @@ export class AuthService {
   
   async loginGoogle(): Promise<User>{
     if(this.platform.is('android')){
-      alert('es android');
+      //alert('es android');
       try{
         const { user }= await this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
         this.updateUserData(user);
@@ -50,7 +53,7 @@ export class AuthService {
         console.log('Error->', error);
       }
     }else if(this.platform.is('desktop')){
-      alert('es desktop');
+      //alert('es desktop');
       try{
         const { user }= await this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
         this.updateUserData(user);
@@ -119,7 +122,5 @@ export class AuthService {
     return userRef.set(data, {merge: true});
 
   }
-  obtenerDatosUsuario (){
-    return this.afAuth.authState;
-  }
+  
 }

@@ -1,8 +1,12 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>REGISTRAR USUARIOS</ion-title>
+  <ion-toolbar color="primary" align="center">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title >REGISTRAR USUARIOS</ion-title>
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content> 
   <form>
@@ -19,7 +23,7 @@
     <ion-row>
       <ion-col>
         <ion-button
-        type="submit" (click)=onRegister(email,password) expand="block">Login</ion-button>
+        type="submit" (click)=onRegister(email,password) expand="block">Crear</ion-button>
       </ion-col>
     </ion-row>
 

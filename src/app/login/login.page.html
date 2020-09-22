@@ -1,8 +1,8 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>LOGIN</ion-title>
+  <ion-toolbar color="primary" align="center">
+    <ion-title>INICIAR SESIÓN</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> 
 
 <ion-content> 
   <form>
@@ -19,24 +19,24 @@
     <ion-row>
       <ion-col>
         <ion-button
-        type="submit" (click)=onLogin(email,password) expand="block">Login</ion-button>
+        type="submit" (click)=onLogin(email,password) expand="block">Login <ion-icon name="key-outline"></ion-icon></ion-button>
       </ion-col>
     </ion-row>
 
-    <span class="divider line one-line" align="center">OR</span>
 
     <ion-row>
       <ion-col>
         <ion-button type="submit" color="danger" (click)="onloginGoogle(email,password)" expand="block" >
-          login google
+          
+          Iniciar Con <ion-icon name="logo-google"></ion-icon>oogle
         </ion-button>
       </ion-col> 
     </ion-row>
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" routerLink="/register" expand="block" >
-          Crear cuenta
+        <ion-button type="submit" color="success" routerLink="/register" expand="block" >
+          Crear Cuenta  <ion-icon name="person-add-outline"></ion-icon>
         </ion-button>
       </ion-col> 
     </ion-row>

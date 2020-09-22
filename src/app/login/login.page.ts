@@ -21,6 +21,8 @@ export class LoginPage implements OnInit {
       if (user) {
         console.log('User->',user);
         this.router.navigate(['\home']);
+      }else{
+        this.router.navigate(['\login']);
       }
     }catch(error){console.log('Error',error);
     }
@@ -48,5 +50,6 @@ export class LoginPage implements OnInit {
     /// redirect -> admin
     // else verified
   }
+  
 
 }

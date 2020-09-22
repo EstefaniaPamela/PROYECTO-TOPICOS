@@ -12,9 +12,10 @@ export class AuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if (this.authSvc.isLogged) {
+        console.log('continua logueado ');
         return true;
       }else{
-        console.log('No se pude acceder!');
+        console.log('No se pude acceder a esta página mienras no se loguee!');
         this.router.navigate(['\login']);
         return false;
       }
