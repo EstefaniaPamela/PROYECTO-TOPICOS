@@ -34,10 +34,21 @@ export class HomePage {
     useLocale: true,
     maxResults: 5
   };
+  subscribe:any;
   constructor(
     private geolocation: Geolocation,
-    private nativeGeocoder: NativeGeocoder
-  ) {
+    private nativeGeocoder: NativeGeocoder,
+    private authservice: AuthService, 
+    private afAuth:AngularFireAuth, 
+    public platform: Platform
+  ) 
+  {
+    this.subscribe = this.platform.backButton.subscribeWithPriority(666666,()=>
+      {
+        if(this.constructor.name =="HomePage"){
+          navigator["app"].exitApp();
+        }
+      })
   }
 
 
@@ -81,4 +92,15 @@ export class HomePage {
     }
     return address.slice(0, -2);
   }
-}
+  ngOnInit(){
+    //this.authservice.obtenerDatosUsuario().subscribe(user$ => console.log(user$));
+    this.authservice.obtenerDatosUsuario().subscribe(user$ => {
+      //this.usuario = user$.displayName;
+      if((this.usuario = user$.displayName)===null){
+        this.usuario = 'N/A';
+        console.log('es nulo');
+      }
+      this.usuario = user$.displayName;
+      this.email = user$.email;
+    });
+}}

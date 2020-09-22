@@ -24,7 +24,8 @@ export class LoginPage implements OnInit {
       }else{
         this.router.navigate(['\login']);
       }
-    }catch(error){console.log('Error',error);
+    }catch(error){
+      console.log('Error',error);
     }
   }
 

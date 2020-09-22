@@ -51,6 +51,7 @@ export class AuthService {
         return user;
       }catch (error) {
         console.log('Error->', error);
+        alert("Error Ingrese un correo válido y una clave de almenos 6 caracteres");
       }
     }else if(this.platform.is('desktop')){
       //alert('es desktop');
@@ -60,6 +61,7 @@ export class AuthService {
         return user;
       }catch (error) {
         console.log('Error->', error);
+        alert("Error Ingrese un correo válido y una clave de almenos 6 caracteres");
       }
     }else{
       try{
@@ -68,6 +70,7 @@ export class AuthService {
       return user;
     }catch (error) {
       console.log('Error->', error);
+      alert("Error Ingrese un correo válido y una clave de almenos 6 caracteres");
     }
     }
     
@@ -80,6 +83,7 @@ export class AuthService {
       return user;
     }catch(error){
       console.log('Error->',error);
+      alert("Error Ingrese un correo válido y una clave de almenos 6 caracteres");
     }
   }
   
@@ -90,6 +94,7 @@ export class AuthService {
       return user;
     } catch (error) {
       console.log('Error->', error);
+      alert("Error Ingrese un correo válido y una clave de almenos 6 caracteres");
     }
 
   }
