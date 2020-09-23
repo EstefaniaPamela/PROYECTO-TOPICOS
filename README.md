@@ -1,2 +1,6 @@
 # PROYECTO FINAL TOPICOS 2020A
-### Creacion de Login
+### Login
+### Registro de Usuarios
+### Consumo de API
+### Implemetación de Geolocalización
+### 
