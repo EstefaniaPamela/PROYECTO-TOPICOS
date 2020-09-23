@@ -5,9 +5,11 @@ Creamos la base de datos en firebase, y las credenciales de la misma las añadim
 ### Login
 Primero se comienza por la creación del login
 Creamos las paginas para esta, se crea la interfaz,  creamos los métodos de, para los botones de crear, login y de login con google.
+![login](https://user-images.githubusercontent.com/49445714/94052399-823e4300-fd9e-11ea-9042-78cf0f59dea8.jpg)
 
 ### Registro de Usuarios
 Creamos un formulario para el registro de nuevos usuarios que nos se encuentren resgistrados con anterioridad.
+![regi](https://user-images.githubusercontent.com/49445714/94052419-8bc7ab00-fd9e-11ea-893d-ca225a82a98e.jpg)
 
 ### Consumo de API
 Creamos un token y los usamos para el consumos del API, que es esta caso es de películas.
@@ -15,5 +17,5 @@ Creamos un token y los usamos para el consumos del API, que es esta caso es de p
 
 ### Implemetación de Geolocalización
 El usuario podrá ver sus coordenadas, la longitud y su latitud.
-
+![geo](https://user-images.githubusercontent.com/49445714/94052443-941fe600-fd9e-11ea-928e-e9bdd351e05a.jpg)
 
