@@ -13,7 +13,7 @@ Creamos un formulario para el registro de nuevos usuarios que nos se encuentren 
 
 ### Consumo de API
 Creamos un token y los usamos para el consumos del API, que es esta caso es de películas.
-
+![api](https://user-images.githubusercontent.com/49445714/94052870-2aeca280-fd9f-11ea-9ea3-db6461a97b18.PNG)
 
 ### Implemetación de Geolocalización
 El usuario podrá ver sus coordenadas, la longitud y su latitud.
