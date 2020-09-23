@@ -2,6 +2,7 @@
 ### Conexión con firebase
 Creamos la base de datos en firebase, y las credenciales de la misma las añadimos al proyecto en ionic.
 ![10](https://user-images.githubusercontent.com/49445714/94050835-689bfc00-fd9c-11ea-9a96-925da1b007aa.PNG)
+![12](https://user-images.githubusercontent.com/49445714/94064265-0a2c4900-fdaf-11ea-8aa7-b7d50aefc14f.PNG)
 ### Login
 Primero se comienza por la creación del login
 Creamos las paginas para esta, se crea la interfaz,  creamos los métodos de, para los botones de crear, login y de login con google.
@@ -14,8 +15,13 @@ Creamos un formulario para el registro de nuevos usuarios que nos se encuentren 
 ### Consumo de API
 Creamos un token y los usamos para el consumos del API, que es esta caso es de películas.
 ![api](https://user-images.githubusercontent.com/49445714/94052870-2aeca280-fd9f-11ea-9ea3-db6461a97b18.PNG)
+se crea una interfaz para captura de los datos del API
+![11](https://user-images.githubusercontent.com/49445714/94064345-2a5c0800-fdaf-11ea-8830-6336579475ea.PNG)
+
 
 ### Implemetación de Geolocalización
 El usuario podrá ver sus coordenadas, la longitud y su latitud.
 ![geo](https://user-images.githubusercontent.com/49445714/94052443-941fe600-fd9e-11ea-928e-e9bdd351e05a.jpg)
+
+
 
